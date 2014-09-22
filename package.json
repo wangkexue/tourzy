@@ -1,0 +1,24 @@
+{
+  "name": "tourzy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "STORMPATH_API_KEY_ID=1STOOMF3D125CHL4PIC3C4O3A STORMPATH_API_KEY_SECRET=iG3Q0RW1BnAfbRGFkwMgx02rFynYNASgQmOomNBz7q8 STORMPATH_APP_HREF=https://api.stormpath.com/v1/applications/1RYSDGTUtvXTTkQQCvxhTX node ./bin/www.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.8.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "express": "~4.9.0",
+    "express-session": "^1.8.2",
+    "jade": "~1.6.0",
+    "morgan": "~1.3.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "passport-stormpath": "^0.1.6",
+    "serve-favicon": "~2.1.3",
+    "stormpath": "^0.5.2",
+    "stylus": "0.42.3"
+  }
+}

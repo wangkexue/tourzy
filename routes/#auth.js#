@@ -1,0 +1,35 @@
+var express = require('express');
+var router = express.Router();
+var passport = require('passport');
+var stormpath = require('stormpath');
+
+// Render login page
+router.get('/login', function(req, res) {
+    res.render('login', {title: 'Login', error: req.flash('error')[0]});
+    var apiKey = new stormpath.ApiKey(
+    	'1STOOMF3D125CHL4PIC3C4O3A',
+    	'iG3Q0RW1BnAfbRGFkwMgx02rFynYNASgQmOomNBz7q8'
+    	//process.env['STORMPATH_API_KEY_ID'],
+    	//process.env['STORMPATH_API_KEY_SECRET']
+ 	);
+    var spClient = new stormpath.Client({ apiKey: apiKey });
+    var app = spClient.getApplication('https://api.stormpath.com/v1/applicatios/1RYSDGTUtvXTTkQQCvxhTX', function(err, app) {
+		if (err) throw err;
+	});
+});
+
+
+// Authenticate a user
+router.post(
+	'/login',
+	passport.authenticate(
+		'stormpath',
+		{
+			successRedirect: '/dashboard',
+			failureRedirect: '/login',
+			failureFlash: 'Invalid email or password.',
+		}
+	)
+);
+
+module.exports = router;

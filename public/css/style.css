@@ -1,0 +1,253 @@
+body {
+  overflow-x: hidden;
+}
+
+#welcome {
+  margin-top: 6em;
+}
+
+#welcome li {
+  font-size: 1.5em;
+}
+
+.login {
+  background: none !important;
+}
+
+#loginbg {
+    background-image: url(../images/loginbg.jpg);
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   display: block;
+}
+
+.overlay-blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(../images/loginbg.jpg);
+  filter: blur(30px); 
+  -webkit-filter: blur(30px); 
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px); 
+  -ms-filter: blur(30px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=30, MakeShadow=false);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.register, .login{
+  margin-top: 6em;
+}
+
+.dashboard {
+  margin-top: 3em;
+  display: none;
+  /*background-color: #EDEEEF;*/
+}
+
+.register-fail, .login-fail {
+  margin-bottom: 1em;
+}
+
+.login .last-p {
+  margin-bottom: 2em;
+}
+
+.dashboard h2 {
+  font-weight: bold;
+}
+
+.dashboard .data {
+  color: #DF691A;
+  font-weight: bold;
+}
+
+.jumbotron h1 {
+  text-align: center;
+}
+
+.jumbotron {
+  padding-top: 30px;
+  height: auto; 
+  overflow: auto;
+  background-color: rgba(224, 225, 226, 0.5);
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 10;
+}
+
+.bigbutton {
+  text-align: center;
+  padding: 24px 48px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 0;
+}
+
+.popover-content {
+  color: rgb(230, 230, 230);
+  font-size: 67%;
+}
+
+.box {
+  margin-bottom: 7%;
+  background: rgba(250, 250, 250, 0.5);
+  margin-left: 4% ;
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid silver;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  /*
+  -webkit-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 16px rgba(0,0,0,.1);
+  box-shadow: 0 1px 16px rgba(0,0,0,.1);
+  */
+  -webkit-box-shadow: 2px 3px 8px #444;
+  -moz-box-shadow: 2px 3px 8px #444;
+  box-shadow: 2px 3px 8px #444;
+  text-align: left;
+  height: 100%;
+  z-index: 2;
+  /*border-bottom: 1px solid #e6e6e6; */
+}
+
+.imgbox {
+  position: relative;
+  margin-bottom: 10px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 0 15px rgba(0,0,0,.08);
+  /*padding-bottom: 100%;*/
+  padding-bottom: 100%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.textbox {
+  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-left: 10%;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 2;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  text-overflow: ellipsis
+}
+
+.single-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: 10000;
+  text-align: center;
+  display:none;
+  overflow: scroll;
+}
+
+.single-view img {
+  position: absolute;
+  cursor: pointer;
+}
+
+.zoomwrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 0px;
+  height: 20%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10001;
+}
+
+.zoombar {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 25%;
+  background-color: rgba( 255, 255, 255, 0.6);
+  height: 8%;
+  width: 50%;
+  z-index: 10001;
+}
+
+.zoomblock {
+  display: none;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 5%;
+  z-index: 10001;
+}
+
+.btn {
+  
+  top: 20px;
+  right: 20px;
+  z-index: 10001;
+}
+
+.btn-default, .btn-info {
+  position: fixed;
+  background-color: rgba(102, 102, 102, 0.6);
+}
+
+.btn-intro {
+  top: 20px;
+  right: 20px;
+}
+
+.overlay {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: none;
+  z-index: 9999;
+}
+
+
+
+.loading {
+  background: transparent url(../images/loader_light.gif) no-repeat center center;
+}
+
+.single-view.loading {
+  background: transparent url(../images/loader_dark.gif) no-repeat center center;
+}
+
+.date {
+  padding-top : 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 11;
+  height: 40px;
+  width: 33%;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
