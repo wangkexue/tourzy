@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 //
 var passport = require('passport');
-var StormpathStrategy = require('passport-stormpath');
+//var StormpathStrategy = require('passport-stormpath');
 var session = require('express-session');
 var flash = require('connect-flash');
 
@@ -19,15 +19,17 @@ var auth_routes = require('./routes/auth');
 var app = express();
 
 //
+/*
 var strategy = new StormpathStrategy({
     apiKeyId: 'YOURKEYID',
     apiKeySecret: 'YOURKEYSECRET',
     appHref: 'YOURHREF'
 });
+
 passport.use(strategy);
 passport.serializeUser(strategy.serializeUser);
 passport.deserializeUser(strategy.deserializeUser);
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -48,11 +50,11 @@ app.use(session({
   key: 'sid',
   cookie: {secure: false},
 }));
-
+/*
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-
+*/
 //app.use('/', routes);
 //app.use('/users', users);
 app.use('/', index_routes);
