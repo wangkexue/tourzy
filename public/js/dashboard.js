@@ -234,10 +234,10 @@
         var classname = $(this).css('background-image').replace(/url\(|\)$/ig, "").replace(window.location.host, "").replace("http:///images/album/", "").replace('.jpg','');
         var date = $("."+classname);
         if ( event.type === 'mouseenter' ) {
-	    date.animate({left : 400, opacity : 1}, 300, 'easeInOutCubic');
+	    date.animate({left : 400, opacity : 1}, 300);
         }
         if (event.type === 'mouseleave') {
-	    date.animate({left : 200, opacity : 0}, 300, 'easeInOutCubic');
+	    date.animate({left : 200, opacity : 0}, 300);
         }
       });
 
